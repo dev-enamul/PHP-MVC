@@ -15,7 +15,7 @@ class Router
       $this->routes['get'][$path] = $callback;
     }
 
-    
+
 
     public function resolve()
     {
@@ -27,6 +27,15 @@ class Router
             echo '404 - Page not found';
             exit;
         }
+        if(is_string($callback))
+        {
+            return $this->renderView($callback);
+        }
         echo call_user_func($callback);
+    }
+
+    public function renderView($view)
+    {
+        include_once __DIR__."/../views/$view.php";
     }
 }
