@@ -1,0 +1,16 @@
+{
+    "name": "user/mvc",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "Md Enamul Haque",
+            "email": "enamul807849@gmail.com"
+        }
+    ],
+    "require": {}
+    
+}
